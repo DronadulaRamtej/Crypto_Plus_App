@@ -4,6 +4,7 @@ const cryptoApiHeaders = {
     'X-RapidAPI-Key': '1a5ad0854bmshcc3ad660f15a63dp1f1f26jsn14a2298db021',
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
 
+
 };
   
 
@@ -43,5 +44,3 @@ export const {
     useGetCryptoStatsQuery,
     useGetCryptosQuery, // Hook for fetching coins from CoinRanking
 } = cryptoApi;
-
-
