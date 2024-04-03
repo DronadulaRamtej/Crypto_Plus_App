@@ -289,10 +289,10 @@ a:hover{
     }
 }
 
-.select-news{
+/* .select-news{
     width: 180px;
-}
-.news-card{
+} */
+/* .news-card{
     min-height: 300px !important;
 }
 .news-image-container{
@@ -310,7 +310,72 @@ width: 70%;
 .news-card p{
     color: black;
     margin: 10px 0px !important;
-}
+} */
+
+/* News Cards Styles */
+.news-card {
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    overflow: hidden; /* Ensures that child elements do not overflow the card boundaries */
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  .news-card:hover {
+    transform: translateY(-5px); /* Slight raise effect on hover */
+  }
+  
+  .news-image-container {
+    display: block; /* Adjusted for simplicity */
+    position: relative; /* To position the title over the image */
+  }
+  
+  .news-image-container .news-image {
+    width: 100%; /* Ensure image covers card width */
+    height: 200px; /* Fixed height for uniformity */
+    object-fit: cover; /* Ensures image covers the area nicely */
+  }
+  
+  .news-image-container Title {
+    position: absolute; /* Position title over the image */
+    bottom: 0; /* Align to the bottom of the image container */
+    left: 0;
+    width: 100%; /* Full width */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: #fff; /* White text color */
+    padding: 10px; /* Padding around text */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .news-card p {
+    margin: 12px 0; /* Adjusted top and bottom margin for spacing */
+  }
+  
+  .provider-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between avatar, name, and time */
+    margin-top: 10px; /* Additional spacing from description to provider */
+  }
+  
+  .provider-container .provider-name, .provider-container Text {
+    margin-left: 10px;
+    display: inline-block; /* Ensures inline behavior with spacing */
+  }
+  
+  /* Responsive Adjustments */
+  @media screen and (max-width: 768px) {
+    .news-card {
+      min-height: auto; /* Adjust height dynamically */
+    }
+  
+    .news-image-container .news-image {
+      height: 150px; /* Adjust image height on smaller screens */
+    }
+  }
+  
+  /* Further mobile adjustments can be added here */
+  
+
 .provider-container{
     display: flex;
     justify-content: space-between;
@@ -378,3 +443,24 @@ width: 70%;
     padding: 20px;
     align-items: center;
 }
+
+/* .news-card {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .news-card .ant-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .news-description {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Limit to 3 lines, adjust as needed */
+    
+
+

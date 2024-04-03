@@ -25,6 +25,8 @@ export const cryptoApi = createApi({
         getCryptoStats: builder.query({
             query: () => createRequest(`${baseUrls.coingecko}/global`),
         }),
+
+        
         // New endpoint for fetching all coins from CoinRanking
         getCryptos: builder.query({
             query: () => createRequest(`${baseUrls.coinranking}/coins`, cryptoApiHeaders, {
